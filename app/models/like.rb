@@ -9,5 +9,4 @@ class Like < ApplicationRecord
     post.save
     post.reload
   end
-
 end

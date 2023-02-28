@@ -8,5 +8,4 @@ class Comment < ApplicationRecord
     post.save
     post.reload
   end
-
 end
