@@ -32,5 +32,4 @@ RSpec.describe Post, type: :model do
     subject.title = 'a' * 251
     expect(subject).to_not be_valid
   end
-
 end
