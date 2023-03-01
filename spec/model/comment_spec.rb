@@ -13,6 +13,6 @@ RSpec.describe Post, type: :model do
   subject { Comment.new(author_id: test_user.id, post_id: test_post.id, text: 'This is a comment for post') }
   before { subject.save }
   it 'Comment counter for post must be incremented' do
-    expect(subject.post.comments_counter).to eql(1)
+    expect(subject.post.comments_counter).to be(1)
   end
 end

@@ -13,6 +13,6 @@ RSpec.describe Like, type: :model do
   subject { Like.new(author_id: test_user.id, post_id: test_post.id) }
   before { subject.save }
   it 'Like counter for post must be incremented by 1' do
-    expect(subject.post.likes_counter).to eql(1)
+    expect(subject.post.likes_counter).to be(1)
   end
 end

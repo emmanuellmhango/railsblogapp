@@ -25,12 +25,11 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Post counter for user must be incremented by one' do
-    expect(subject.user.posts_counter).to eql(1)
+    expect(subject.user.posts_counter).to be(1)
   end
 
   it 'title maximum 250 chars' do
     subject.title = 'a' * 251
     expect(subject).to_not be_valid
   end
-
 end
