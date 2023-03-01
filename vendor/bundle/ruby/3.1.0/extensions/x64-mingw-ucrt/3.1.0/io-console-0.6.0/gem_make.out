@@ -1,0 +1,17 @@
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+C:/Ruby31-x64/bin/ruby.exe -I C:/Ruby31-x64/lib/ruby/3.1.0 extconf.rb
+checking for HAVE_RUBY_FIBER_SCHEDULER_H... yes
+creating Makefile
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-6l3y1d sitelibdir\=./.gem.20230301-15180-6l3y1d clean
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-6l3y1d sitelibdir\=./.gem.20230301-15180-6l3y1d
+generating console-x64-mingw-ucrt.def
+compiling console.c
+linking shared-object io/console.so
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-6l3y1d sitelibdir\=./.gem.20230301-15180-6l3y1d install
+/usr/bin/install -c -m 0755 console.so ./.gem.20230301-15180-6l3y1d/io

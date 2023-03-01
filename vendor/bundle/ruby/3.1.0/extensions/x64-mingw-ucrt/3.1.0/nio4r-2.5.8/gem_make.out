@@ -1,0 +1,14 @@
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
+C:/Ruby31-x64/bin/ruby.exe -I C:/Ruby31-x64/lib/ruby/3.1.0 extconf.rb
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-4f019w sitelibdir\=./.gem.20230301-15180-4f019w clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-4f019w sitelibdir\=./.gem.20230301-15180-4f019w
+make: Nothing to be done for 'all'.
+
+current directory: C:/code/railsblogapp/vendor/bundle/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
+make DESTDIR\= sitearchdir\=./.gem.20230301-15180-4f019w sitelibdir\=./.gem.20230301-15180-4f019w install
+make: Nothing to be done for 'install'.
