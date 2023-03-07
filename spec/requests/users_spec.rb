@@ -8,12 +8,12 @@ RSpec.describe 'Users', type: :request do
 
     it 'Renders the index template' do
       get '/users'
-      expect(response).to render_template(:index) 
+      expect(response).to render_template(:index)
     end
-    
+
     it 'Renders the index template' do
       get '/users'
-      expect(response).to be_successful 
+      expect(response).to be_successful
     end
 
     it 'includes the user names in the response body' do
@@ -22,7 +22,7 @@ RSpec.describe 'Users', type: :request do
     end
   end
 
-  describe "GET /users/:id" do
+  describe 'GET /users/:id' do
     let(:user) { User.create!(name: 'Emmanuel', posts_counter: 0) }
 
     it 'returns a successful response' do
@@ -30,7 +30,7 @@ RSpec.describe 'Users', type: :request do
       expect(response).to be_successful
     end
 
-    it "renders the show template" do
+    it 'renders the show template' do
       get "/users/#{user.id}"
       expect(response).to render_template(:show)
     end

@@ -9,25 +9,25 @@ RSpec.describe 'Posts', type: :request do
       Post.create!(title: 'Post 2', author_id: user.id, likes_counter: 0, comments_counter: 0)
     end
 
-    it'returns a successful response' do
+    it 'returns a successful response' do
       get "/users/#{user.id}/posts"
       expect(response).to be_successful
     end
 
-    it'returns a successful response' do
+    it 'returns a successful response' do
       get "/users/#{user.id}/posts"
       expect(response).to render_template(:index)
     end
 
-    it'includes the text from the body' do
+    it 'includes the text from the body' do
       get "/users/#{user.id}/posts"
       expect(response.body).to include('Here is a list of posts for a given user')
     end
   end
 
-  describe 'GET /show' do 
+  describe 'GET /show' do
     let(:user) { User.create!(name: 'Emmanuel', posts_counter: 0) }
-    let(:post) { Post.create!(title: 'Post 1', author_id:user.id, likes_counter: 0, comments_counter: 0) }
+    let(:post) { Post.create!(title: 'Post 1', author_id: user.id, likes_counter: 0, comments_counter: 0) }
 
     it 'returns a successful response' do
       get "/users/#{user.id}/posts/#{post.id}"
