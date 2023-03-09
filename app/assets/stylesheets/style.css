@@ -24,6 +24,7 @@ a {
 }
 
 .bio-class {
+  margin-top: 10px;
   font-size: 19px;
   border: 1px solid #ccc;
 }
@@ -35,8 +36,12 @@ a {
 
 .single-post,
 .user-posts {
+  margin-top: 10px;
   border: 1px solid #ccc;
-  padding: 5px;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 20px;
 }
 
 .comment {
@@ -47,11 +52,4 @@ a {
 .stats {
   font-size: small;
   float: right;
-  margin-right: 10px;
-}
-
-.posts-container {
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  padding: 5px;
 }
