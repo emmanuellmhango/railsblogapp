@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_validation :set_default_values
+
   validates :name, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
@@ -8,5 +10,11 @@ class User < ApplicationRecord
 
   def three_recent_posts
     posts.limit(3).order(created_at: :DESC)
+  end
+
+  private
+
+  def set_default_values
+    self.posts_counter ||= 0
   end
 end
