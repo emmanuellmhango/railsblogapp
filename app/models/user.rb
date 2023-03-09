@@ -1,11 +1,20 @@
 class User < ApplicationRecord
+  before_validation :set_default_values
+
   validates :name, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  has_many :comments, class_name: 'Comment', foreign_key: 'post_id'
-  has_many :posts, class_name: 'Post', foreign_key: 'post_id'
-  has_many :likes, class_name: 'Like', foreign_key: 'author_id'
 
-  def recent_posts
-    posts.order(created_at: :desc).limit(3)
+  has_many :posts, foreign_key: :author_id
+  has_many :comments, foreign_key: :author_id
+  has_many :likes, foreign_key: :author_id
+
+  def three_recent_posts
+    posts.limit(3).order(created_at: :DESC)
+  end
+
+  private
+
+  def set_default_values
+    self.posts_counter ||= 0
   end
 end

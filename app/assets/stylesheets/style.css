@@ -1,0 +1,56 @@
+body {
+  font-family: Helvetica, Geneva, Arial, sans-serif;
+  font-size: small;
+  color: #000;
+  background-color: #fff;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: large;
+}
+
+.number-of-posts {
+  float: right;
+  font-size: 17px;
+}
+
+.bio-class {
+  margin-top: 10px;
+  font-size: 19px;
+  border: 1px solid #ccc;
+}
+
+.user-class {
+  height: 100px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.single-post,
+.user-posts {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 20px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.stats {
+  font-size: small;
+  float: right;
+}
