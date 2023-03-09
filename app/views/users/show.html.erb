@@ -1,13 +1,14 @@
 <h1>Specific user</h1>
 <div class='user-class'>
-  <span class='title'> <%= @user.name %> </span> <span class='posts_counter'>Number of posts: <%= @user.post_counter %></span>
+  <span class='title'> <%= @user.name %> </span> <span class='number-of-posts'>Number of posts: <%= @user.post_counter %></span>
 </div>
 <div class='bio-class'>
+  <h4>Bio</h4>
   <%= @user.bio %>
 </div>
 <div class='posts-container'>
   <% @user.recent_posts.each_with_index do |post, index| %>
-    <div class='user-class'>
+    <div class='user-posts'>
       <h2>Post #<%= index+1 %>
       <p class='post'> <%= post.text %></p>
       <div class='stats'>
@@ -17,7 +18,7 @@
   <% end %>
   <% link = "#{@user.id}/posts" %>
     <a href=<%= link %> >
-      <button>Show All Posts</button>
+      <button>See All Posts</button>
     </a>
   <div>
 </div>

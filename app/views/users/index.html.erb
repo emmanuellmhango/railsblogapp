@@ -4,7 +4,7 @@
     <% link = "users/#{user.id}" %>
     <a href=<%= link %>>
       <div class="user-class">
-        <span class='title'> <%= user.name %>, Number of posts: <%= user.post_counter %></span>
+        <span class='title'> <%= user.name %></title> <span class='number-of-posts'>Number of posts: <%= user.post_counter %></span>
       </div>
     </a>
   <% end %>
