@@ -29,6 +29,20 @@ a {
   border: 1px solid #ccc;
 }
 
+.field {
+  margin-top: 10px;
+}
+
+.form-group {
+  height: 30px;
+  width: 300px;
+}
+
+.form-group-btn {
+  height: 30px;
+  width: 150px;
+}
+
 .user-class {
   height: 100px;
   border: 1px solid #ccc;

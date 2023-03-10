@@ -7,3 +7,5 @@
   </p>
 </div>
 <%= render partial: 'comment', locals: { comments: @post.comments } %>
+<%= link_to 'Add a comment', new_user_post_comment_path(@current_user, post_id: @post.id, user_id: 1) %> 
+<%= button_to "Like", user_post_likes_path(@current_user, post_id: @post.id, user_id: 1), method: :post, class: 'form-group-btn field' %>

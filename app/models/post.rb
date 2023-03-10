@@ -13,7 +13,7 @@ class Post < ApplicationRecord
   after_save :update_counter
 
   def update_counter
-    user.update(posts_counter: author.posts.count)
+    user.update(posts_counter: user.posts.count)
   end
 
   def increment_posts_counter

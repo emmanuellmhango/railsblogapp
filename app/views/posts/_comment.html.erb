@@ -1,6 +1,7 @@
-<% unless comments.empty? %>
+<% unless @post.comments.empty? %>
+  <h4>Comments</h4>
   <div class='comment'>
-    <% comments.each do |comment| %>
+    <% @post.comments.each do |comment| %>
       <div class='comments'>
         Username: <%= comment.author.name %>
         Comment: <%= comment.text %>
@@ -8,3 +9,4 @@
     <% end %>
   </div>
 <% end %>
+<br />

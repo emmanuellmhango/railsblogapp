@@ -1,5 +1,6 @@
 <h1>Here is a list of posts for a given user</h1>
 <div class='container'>
+<%= link_to "Create a new post", new_user_post_path(@current_user, user_id: 1) %>
 <% @posts.each_with_index do |post, index| %>
   <% link = "posts/#{post.id}" %>
   <a href=<%= link %>>
