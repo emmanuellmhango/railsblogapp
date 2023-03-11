@@ -1,7 +1,7 @@
-<% unless @post.comments.empty? %>
+<% unless comments.empty? %>
   <h4>Comments</h4>
   <div class='comment'>
-    <% @post.comments.each do |comment| %>
+    <% comments.each do |comment| %>
       <div class='comments'>
         Username: <%= comment.author.name %>
         Comment: <%= comment.text %>
