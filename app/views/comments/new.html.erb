@@ -1,0 +1,13 @@
+<h1>New Comment</h1>
+<%= form_with model: @new_comment, url: user_post_comments_path  do |f|  %>
+  <div class="field">
+    <%= f.label :text, 'Comment' %> <br />
+    <%= f.text_area :text, class: 'form-group' %>
+  </div>
+
+  <%= hidden_field_tag :post_id, params[:post_id] %>
+  <%= hidden_field_tag :author_id, params[:user_id] %>
+  <div class="field">
+    <%= f.submit 'Submit', class: 'form-group-btn' %>
+  </div>
+<% end %>
