@@ -21,12 +21,12 @@ RSpec.describe 'Post Page Index', type: :feature do
     visit user_posts_path(@user1.id)
   end
 
-  it 'should have the username of the user' do
-    expect(page).to have_content(@post.title)
+  it 'should have the post text' do
+    expect(page).to have_content(@post.text)
   end
 
   it 'should have the writer of the post' do
-    expect(page).to have_content("#{@user.name}:")
+    expect(page).to have_content(@user1.name)
   end
 
   it 'should have the number of comments for the post' do

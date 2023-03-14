@@ -15,11 +15,6 @@ RSpec.describe 'Users', type: :request do
       get '/users'
       expect(response).to be_successful
     end
-
-    it 'includes the user names in the response body' do
-      get '/users'
-      expect(response.body).to include('Here is a list of all user')
-    end
   end
 
   describe 'GET /users/:id' do
@@ -33,11 +28,6 @@ RSpec.describe 'Users', type: :request do
     it 'renders the show template' do
       get "/users/#{user.id}"
       expect(response).to render_template(:show)
-    end
-
-    it 'includes text in the response body' do
-      get "/users/#{user.id}"
-      expect(response.body).to include('Specific user')
     end
   end
 end

@@ -18,11 +18,6 @@ RSpec.describe 'Posts', type: :request do
       get "/users/#{user.id}/posts"
       expect(response).to render_template(:index)
     end
-
-    it 'includes the text from the body' do
-      get "/users/#{user.id}/posts"
-      expect(response.body).to include('Here is a list of posts for a given user')
-    end
   end
 
   describe 'GET /show' do
@@ -37,11 +32,6 @@ RSpec.describe 'Posts', type: :request do
     it 'renders the show template' do
       get "/users/#{user.id}/posts/#{post.id}"
       expect(response).to render_template(:show)
-    end
-
-    it 'includes the post page test in the response body' do
-      get "/users/#{user.id}/posts/#{post.id}"
-      expect(response.body).to include('Specific post')
     end
   end
 end

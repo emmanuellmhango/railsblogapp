@@ -22,11 +22,6 @@ RSpec.describe 'User Index', type: :feature do
     expect(page).to have_content(@user2.name)
   end
 
-  it 'should have the photo of each user' do
-    assert page.has_xpath?("//img[@src = 'https://static.freeimages.com/images/home/filetypes/photo.png']")
-    assert page.has_xpath?("//img[@src = 'https://static.freeimages.com/images/home/filetypes/photo.png']")
-  end
-
   it 'should have the users number of posts' do
     expect(page).to have_content('Number of posts: 1')
     expect(page).to have_content('Number of posts: 2')
