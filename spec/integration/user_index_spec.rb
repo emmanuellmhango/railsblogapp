@@ -4,7 +4,7 @@ RSpec.describe 'User Index', type: :feature do
   before :each do
     @user1 = User.create(
       name: 'Emmanuel',
-      photo: 'https://static.freeimages.com/images/home/filetypes/photo.png',
+      photo: 'https://images.freeimages.com/images/large-previews/f53/give-me-a-kiss-1638831.jpg',
       bio: 'Full Stack',
       posts_counter: 1
     )
@@ -15,6 +15,11 @@ RSpec.describe 'User Index', type: :feature do
       posts_counter: 2
     )
     visit root_path
+  end
+
+  it 'should have the photo of each user' do
+    assert page.has_xpath?("//img[@src = 'https://static.freeimages.com/images/home/filetypes/photo.png']")
+    assert page.has_xpath?("//img[@src = 'https://images.freeimages.com/images/large-previews/f53/give-me-a-kiss-1638831.jpg']")
   end
 
   it 'should have the username of all users' do

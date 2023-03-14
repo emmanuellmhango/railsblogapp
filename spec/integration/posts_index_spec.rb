@@ -50,4 +50,14 @@ RSpec.describe 'Post Index', type: :feature do
   it 'should have the body of a post' do
     expect(page).to have_content('This is my first post!')
   end
+
+  it 'should redirect to posts show page' do
+    click_on(class: 'pagination')
+    expect(page).to have_current_path(user_posts_url(user_id: @user.id))
+  end
+
+  it 'redirect to user post page' do
+    click_link(@post.text)
+    expect(page).to have_current_path(user_post_url(user_id: @user.id, id: @post.id))
+  end
 end

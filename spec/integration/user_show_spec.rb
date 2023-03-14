@@ -7,7 +7,7 @@ RSpec.describe 'User Page Index', type: :feature do
       bio: 'Full-Stack Engineer',
       posts_counter: 0
     )
-    @post1 = Post.create(title: 'My Post 1', text: 'This is my first post!', comments_counter: 0,
+    @post1 = Post.create(title: 'My Post 1', text: 'This is my first post', comments_counter: 0,
                          likes_counter: 0, author_id: @user.id)
     @post2 = Post.create(title: 'My Post 2', text: 'This is my second post!', comments_counter: 0,
                          likes_counter: 0, author_id: @user.id)
@@ -42,5 +42,10 @@ RSpec.describe 'User Page Index', type: :feature do
   it 'should redirect to all user posts index page on click' do
     click_link('See All Posts')
     expect(page).to have_current_path user_posts_path(@user.id)
+  end
+
+  it 'redirect to user post click' do
+    click_link(@post1.text)
+    expect(page).to have_current_path(user_post_url(user_id: @user.id, id: @post1.id))
   end
 end
