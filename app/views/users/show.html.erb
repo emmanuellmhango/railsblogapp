@@ -1,7 +1,4 @@
-<h1>Specific user</h1>
-<div class='user-class'>
-  <span class='title'> <%= @user.name %> </span> <span class='number-of-posts'>Number of posts: <%= @user.posts_counter %></span>
-</div>
+<%= render partial: 'userheader', locals: { user: @user } %>
 <div class='bio-class'>
   <h4>Bio</h4>
   <%= @user.bio %>
