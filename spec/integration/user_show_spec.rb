@@ -10,7 +10,7 @@ RSpec.describe 'User Page Index', type: :feature do
     @post1 = Post.create(title: 'My Post 1', text: 'This is my first post!', comments_counter: 0,
                          likes_counter: 0, author_id: @user.id)
     @post2 = Post.create(title: 'My Post 2', text: 'This is my second post!', comments_counter: 0,
-                         likes_counter: 0, author_id: @user.id )
+                         likes_counter: 0, author_id: @user.id)
     visit user_path(@user.id)
   end
 
