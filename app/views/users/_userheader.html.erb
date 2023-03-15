@@ -1,7 +1,7 @@
 <div class='user-class'>
   <div class='user-class-details'>
     <div class='prof-pic'>
-      <img src='<%= @user.photo %>' alt='Profile Picture' class='border-black'>
+        <%= image_tag @user.try(:photo) || 'https://static.freeimages.com/images/home/filetypes/photo.png', class: 'prof-pic' %>
     </div>
     <div class='user-details'>
       <span class='title'> <%= @user.name %> </span> <span class='number-of-posts'>Number of posts: <%= @user.posts_counter %></span>
