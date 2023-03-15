@@ -117,6 +117,8 @@ To test the project, execute the following command:
 
 ### Deployment
 
+> Coming soon
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Author <a name="authors"></a>
