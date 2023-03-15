@@ -1,3 +1,5 @@
+# 📖<a name="about-project">MY BLOG APP</a>
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -24,9 +26,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [MY BLOG APP] <a name="about-project"></a>
-
 **[Blog App]** is a classic example of a blog website. You can see the list of posts and empower readers to interact with them by adding comments and liking posts.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
