@@ -1,7 +1,3 @@
-# RUBY BLOG APP
-
-<a name="readme-top"></a>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -28,15 +24,19 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 -OOP Library <a name="about-project"></a>
+# 📖 [MY BLOG APP] <a name="about-project"></a>
 
-**This is a blog that lets you register, add posts and comment on those posts**
-
+**[Blog App]** is a classic example of a blog website. You can see the list of posts and empower readers to interact with them by adding comments and liking posts.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-The site was built with RUBY
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
 <details>
 <summary>Database</summary>
@@ -63,7 +63,7 @@ The site was built with RUBY
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> not yet
+> not link yet
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,8 +76,9 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-
-sudo apt-get install postgresql postgresql-contrib
+```sh
+    sudo apt-get install postgresql postgresql-contrib
+```
 
 ### Setup
 
@@ -90,22 +91,34 @@ git clone https://github.com/emmanuellmhango/railsblogapp.git
 
 Install this project with:
 
-cd railsblogapp
+```sh
+  cd railsblogapp
+  npm install
+  bundle install
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
-`
+```sh
   rails server
-`
+```
+
+### Test
+
+To test the project, execute the following command:
+
+```sh
+  rspec
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Author <a name="authors"></a>
 
 - GitHub: [@emmanuellmhango](https://github.com/emmanuellmhango)
 - LinkedIn: [@emmanuellmhango](https://linkedin.com/in/emmanuellmhango)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,11 +164,11 @@ I would like to thank everyone who contributed to this project
 
 - **Do i need internet**
 
-  - no
+  - yes. it requires internet to send confirmation emails
 
 - **Do I need Node**
 
-  - yes
+  - yes, it is a requirement. please see the installation guidelines above
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
