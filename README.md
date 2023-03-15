@@ -95,6 +95,8 @@ Install this project with:
   cd railsblogapp
   npm install
   bundle install
+  rails db:create
+  rails db:migrate
 ```
 
 ### Usage
@@ -112,6 +114,8 @@ To test the project, execute the following command:
 ```sh
   rspec
 ```
+
+### Deployment
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
