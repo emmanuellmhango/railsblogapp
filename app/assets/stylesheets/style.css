@@ -18,6 +18,11 @@ a {
   font-size: large;
 }
 
+.prof-pic {
+  width: 100px;
+  height: 100px;
+}
+
 .number-of-posts {
   float: right;
   font-size: 17px;

@@ -1,4 +1,4 @@
-<h1>Here is a list of posts for a given user</h1>
+<%= render partial: '/users/userheader', locals: { user: @user } %>
 <div class='container'>
 <%= link_to "Create a new post", new_user_post_path(@current_user, user_id: 1) %>
 <% @posts.each_with_index do |post, index| %>
@@ -15,3 +15,7 @@
   <%= render partial: 'comment', locals: {comments: post.recent_comments} %>
 <% end %>
 </div>
+<% link = "#{@user.id}/posts" %>
+<a href=<%= link %> >
+  <button class='pagination'>pagination</button>
+</a>
