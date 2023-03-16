@@ -30,7 +30,7 @@ gem 'jbuilder'
 # Devise gem for Authentication
 gem 'devise'
 
-# CanCanCan Gem for Authorization
+# CanCanCan Gem for authorization
 gem 'cancancan'
 
 # TESTING
