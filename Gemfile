@@ -27,8 +27,11 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
-# Devise
+# Devise gem for Authentication
 gem 'devise'
+
+# CanCanCan Gem for Authorization
+gem 'cancancan'
 
 # TESTING
 gem 'rails-controller-testing'
