@@ -9,8 +9,8 @@ class Ability
     else
       can :read, :all
       can :create, Post
-      can :manage, Post, user_id: user.id
-      can :manage, Comment, user_id: user.id
+      can :manage, Post, author_id: user.id
+      can :manage, Comment, author_id: user.id
       can :manage, User, id: user.id
     end
 

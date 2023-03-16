@@ -11,6 +11,7 @@ class Post < ApplicationRecord
 
   after_create :increment_posts_counter
   after_save :update_counter
+  after_destroy :decrement_posts
 
   def update_counter
     user.update(posts_counter: user.posts.count)
@@ -31,5 +32,9 @@ class Post < ApplicationRecord
   def set_default_values
     self.comments_counter ||= 0
     self.likes_counter ||= 0
+  end
+
+  def decrement_posts
+    author.decrement!(:posts_counter)
   end
 end
