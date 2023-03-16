@@ -5,6 +5,21 @@ body {
   background-color: #fff;
 }
 
+.user-class-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-details {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
 .container {
   padding: 0;
   margin: 0;
@@ -15,7 +30,7 @@ a {
 }
 
 .title {
-  font-size: large;
+  font-size: 24px;
 }
 
 .prof-pic {
