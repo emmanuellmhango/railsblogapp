@@ -4,13 +4,11 @@
       <div class='comments'>
         Username: <%= comment.author.name %>
         Comment: <%= comment.text %>
-
-
-          ##############################
-
-
-
-
+        <% if can? :destroy, comment %>
+          <button type="button" class="btn delete-btn">
+            <%= link_to "Delete Comment", user_post_comment_path(author_id: comment.author_id, post_id: comment.post.id, id: comment.id), data: { turbo_method: :delete } %>
+          </button>
+        <% end %>
       </div>
     <% end %>
   </div>
