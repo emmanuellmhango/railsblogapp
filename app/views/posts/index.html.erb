@@ -9,10 +9,12 @@
       <p><%= post.text %></p>
       <div class='stats'>
         <span>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
-         <% if can? :destroy, post %>
-          <%= link_to "Delete Post", user_post_path(user_id: post.author_id, id: post.id), data: { turbo_method: :delete } %>
-        <% end %>
       </div>
+        <% if can? :destroy, post %>
+          <button type="button" class="btn delete-btn">
+            <%= link_to "Delete Post", user_post_path(user_id: post.author_id, id: post.id), data: { turbo_method: :delete } %>
+          </button>
+        <% end %>
     </div>
   </a>
   <%= render partial: 'comment', locals: {comments: post.recent_comments} %>

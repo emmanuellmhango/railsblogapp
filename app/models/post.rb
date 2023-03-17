@@ -35,6 +35,6 @@ class Post < ApplicationRecord
   end
 
   def decrement_posts
-    author.decrement!(:posts_counter)
+    user.decrement!(:posts_counter)
   end
 end
