@@ -1,6 +1,6 @@
 <%= render partial: '/users/userheader', locals: { user: @user } %>
-<div class='container'>
-<%= link_to "Create a new post", new_user_post_path(@current_user, user_id: 1) %>
+<div class='container'><br />
+<%= link_to "Create a new post", new_user_post_path(@current_user) %> <br />
 <% @posts.each_with_index do |post, index| %>
   <% link = "posts/#{post.id}" %>
   <a href=<%= link %>>
@@ -10,12 +10,18 @@
       <div class='stats'>
         <span>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
       </div>
+        <% if can? :destroy, post %>
+          <button type="button" class="btn delete-btn">
+            <%= link_to "Delete Post", user_post_path(user_id: post.author_id, id: post.id), data: { turbo_method: :delete } %>
+          </button>
+        <% end %>
     </div>
   </a>
   <%= render partial: 'comment', locals: {comments: post.recent_comments} %>
 <% end %>
 </div>
-<% link = "#{@user.id}/posts" %>
-<a href=<%= link %> >
+<br />
+<% linkPagina = "#{@user.id}/posts" %>
+<a href=<%= linkPagina %> >
   <button class='pagination'>pagination</button>
 </a>
