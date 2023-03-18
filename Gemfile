@@ -33,6 +33,9 @@ gem 'devise'
 # CanCanCan Gem for authorization
 gem 'cancancan'
 
+# Rswag
+gem 'rswag'
+
 # TESTING
 gem 'rails-controller-testing'
 
